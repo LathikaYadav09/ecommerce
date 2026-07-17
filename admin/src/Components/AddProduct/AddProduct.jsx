@@ -28,7 +28,7 @@ import upload_area from '../../assets/Admin_Assets/upload_area.svg'
         let formData=new FormData();
         formData.append('product', image);
 
-        await fetch('http://localhost:4000/upload', {
+        await fetch('https://ecommerce-production-51fb.up.railway.app/upload', {
             method:'POST',
             headers:{
                 Accept:'application/json'
@@ -39,10 +39,10 @@ import upload_area from '../../assets/Admin_Assets/upload_area.svg'
         if(responseData.success){
             product.image=responseData.image_url;
             console.log(product);
-            await fetch('http://localhost:4000/addproduct',{
+                await fetch('https://ecommerce-production-51fb.up.railway.app/addproduct', {
                 method:'POST',
                 headers:{
-                    Accept:'appliccation/json',
+                    Accept:'application/json',
                     'Content-Type':'application/json',
                 },
                 body:JSON.stringify(product),

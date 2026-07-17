@@ -16,7 +16,7 @@ import './CSS/LoginSignup.css'
   const login=async()=>{
       console.log("Login Function Executed", formData);
       let responseData;
-       await fetch('http://localhost:4000/login',{
+       await fetch('https://ecommerce-production-51fb.up.railway.app/login',{
         method:'POST',
         headers:{
           Accept:'application/form-data',
@@ -37,7 +37,7 @@ import './CSS/LoginSignup.css'
   const signup=async()=>{
        console.log("Signup Function Executed", formData);
        let responseData;
-       await fetch('http://localhost:4000/signup',{
+       await fetch('https://ecommerce-production-51fb.up.railway.app/signup',{
         method:'POST',
         headers:{
           Accept:'application/form-data',
